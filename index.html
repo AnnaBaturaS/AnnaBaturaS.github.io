@@ -1,34 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>
-    Spades: Classic card game
-  </title>
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <link rel="stylesheet" href="styles.css">
-<script defer src="main.bundle.js"></script>
+  <meta charset="UTF-8">
+  <title> Spades: Classic card game</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeSpeed;
+      color: #fff;
+      user-select: none;
+    }
+
+    h1,
+    p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    img {
+      display: block;
+    }
+
+    .promo__blurred-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .promo__blurred-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .promo__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    @media all and (orientation: landscape) {
+      .promo__content {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .promo__product,
+    .promo__information {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    @media all and (orientation: landscape) {
+
+      .promo__product,
+      .promo__information {
+        max-width: 360px;
+        margin: 0;
+      }
+    }
+
+    .promo__product {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 24px 20px 10px;
+    }
+
+    .promo__product-img {
+      width: 100%;
+    }
+
+    .promo__product-logo {
+      margin-top: 10px;
+      width: 40px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+    }
+
+    @media all and (orientation: landscape) {
+      .promo__product {
+        max-width: 260px;
+      }
+    }
+
+    @media all and (orientation: landscape) {
+      .promo__information {
+        margin-left: 30px;
+      }
+    }
+
+    .promo__title {
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 38px;
+    }
+
+    @media all and (orientation: landscape) {
+      .promo__title {
+        margin-top: 0px;
+      }
+    }
+
+    .promo__description {
+      margin-top: 14px;
+      font-size: 19px;
+      line-height: 1.4;
+      letter-spacing: 0.4px;
+    }
+
+    .promo__buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .promo__buttons .button {
+      width: calc(50% - 14px);
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 3px solid #fff;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #000;
+      height: 46px;
+      box-sizing: border-box;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      outline: inherit;
+    }
+
+    .button--light {
+      background-color: transparent;
+      color: #fff;
+    }
+  </style>
 </head>
+
 <body>
-<div class="promo">
+  <div class="promo">
     <div class="promo__blurred-image">
-        <img src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg" alt="Размытая картинка">
+      <img alt="Background Image" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
     </div>
     <div class="promo__content">
-        <div class="promo__product">
-            <img class="promo__product-img" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg" alt="Изображение продукта">
-            <img class="promo__product-logo" src="https://cta.bidmachine.io/apps/icons/com.newpubco.spades.jpg" alt="Логотип продукта">
+      <div class="promo__product">
+        <img alt="Product Image" class="promo__product-img" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
+        <img alt="Product Logo" class="promo__product-logo" src="https://cta.bidmachine.io/apps/icons/com.newpubco.spades.jpg">
+      </div>
+      <div class="promo__information">
+        <h1 class="promo__title">
+          Spades: Classic card game
+        </h1>
+        <p class="promo__description">
+          NewPub’s Spades is the best online spades alternative to the classic game of Spades
+        </p>
+        <div class="promo__buttons">
+          <button class="button button--light" id="closeButton">Close</button>
+          <button class="button button" id="installButton">Install</button>
         </div>
-        <div class="promo__information">
-            <h1 class="promo__title">Spades: Classic card game</h1>
-            <p class="promo__description">NewPub’s Spades is the best online spades alternative to the classic game of Spades</p>
-            <div class="promo__buttons">
-                <button class="button button--light">Close</button>
-                <button class="button button">Install</button>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const closeButton = document.getElementById("closeButton");
+      const installButton = document.getElementById("installButton");
+
+      closeButton.addEventListener("click", function () {
+        window.close();
+      });
+
+      installButton.addEventListener("click", function () {
+        const clickTrackers = [
+          "https://click.tracker.com/1",
+          "https://click.tracker.com/2",
+        ];
+
+        clickTrackers.forEach(function (trackerUrl) {
+          sendRequest(trackerUrl);
+        });
+
+        window.location.href = "https://play.google.com/store/apps/details?id=com.newpubco.spades&hl=en&gl=US&pli=1";
+      });
+
+      function sendRequest(url) {
+        const img = new Image();
+        img.src = url;
+        img.style.display = "none";
+        document.body.appendChild(img);
+      }
+    });
+  </script>
 </body>
 </html>
