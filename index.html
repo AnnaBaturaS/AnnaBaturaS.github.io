@@ -1,236 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title> Spades: Classic card game</title>
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+    <meta charset="UTF-8">
+    <title> Spades: Classic card game</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
 
-    html {
-      height: 100%;
-      width: 100%;
-    }
+        html {
+            height: 100%;
+            width: 100%;
+        }
 
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeSpeed;
-      color: #fff;
-      user-select: none;
-    }
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeSpeed;
+            color: #fff;
+            user-select: none;
+            font-size: 16px;
+        }
 
-    h1,
-    p {
-      margin: 0;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 1;
-    }
+        @media (min-width: 600px) {
+            body {
+                font-size: 18px;
+            }
+        }
 
-    img {
-      display: block;
-    }
+        @media (min-width: 700px) {
+            body {
+                font-size: 22px;
+            }
+        }
 
-    .promo__blurred-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+        @media (min-width: 800px) {
+            body {
+                font-size: 25px;
+            }
+        }
 
-    .promo__blurred-image img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        @media (min-width: 1024px) {
+            body {
+                font-size: 28px;
+            }
+        }
 
-    .promo__content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(5px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      box-sizing: border-box;
-    }
+        @media (min-width: 1300px) {
+            body {
+                font-size: 30px;
+            }
+        }
 
-    @media all and (orientation: landscape) {
-      .promo__content {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
+        @media all and (orientation: landscape) and (min-width: 600px) {
 
-    .promo__product,
-    .promo__information {
-      max-width: 340px;
-      margin: 0 auto;
-    }
+            body {
+                font-size: 16px;
+            }
+        }
 
-    @media all and (orientation: landscape) {
+        @media all and (orientation: landscape) and (min-width: 800px) {
 
-      .promo__product,
-      .promo__information {
-        max-width: 360px;
-        margin: 0;
-      }
-    }
+            body {
+                font-size: 20px;
+            }
+        }
 
-    .promo__product {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 24px 20px 10px;
-    }
+        @media all and (orientation: landscape) and (min-width: 1000px) {
 
-    .promo__product-img {
-      width: 100%;
-    }
+            body {
+                font-size: 24px;
+            }
+        }
 
-    .promo__product-logo {
-      margin-top: 10px;
-      width: 40px;
-      object-fit: cover;
-      aspect-ratio: 1/1;
-    }
+        @media all and (orientation: landscape) and (min-width: 1300px) {
 
-    @media all and (orientation: landscape) {
-      .promo__product {
-        max-width: 260px;
-      }
-    }
+            body {
+                font-size: 30px;
+            }
+        }
 
-    @media all and (orientation: landscape) {
-      .promo__information {
-        margin-left: 30px;
-      }
-    }
+        h1,
+        p {
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.125em;
+            line-height: 1;
+        }
 
-    .promo__title {
-      font-size: 26px;
-      font-weight: 600;
-      margin-top: 38px;
-    }
+        img {
+            display: block;
+        }
 
-    @media all and (orientation: landscape) {
-      .promo__title {
-        margin-top: 0px;
-      }
-    }
+        .promo__blurred-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    .promo__description {
-      margin-top: 14px;
-      font-size: 19px;
-      line-height: 1.4;
-      letter-spacing: 0.4px;
-    }
+        .promo__blurred-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .promo__buttons {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+        .promo__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1.9em;
+            box-sizing: border-box;
+        }
 
-    .promo__buttons .button {
-      width: calc(50% - 14px);
-    }
+        @media all and (orientation: landscape) {
+            .promo__content {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
 
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      border: 3px solid #fff;
-      border-radius: 3px;
-      background-color: #fff;
-      color: #000;
-      height: 46px;
-      box-sizing: border-box;
-      font-size: 20px;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: "Montserrat", sans-serif;
-      outline: inherit;
-    }
+        .promo__product,
+        .promo__information {
+            max-width: 340px;
+            max-width: 21.3em;
+            margin: 0 auto;
+        }
 
-    .button--light {
-      background-color: transparent;
-      color: #fff;
-    }
-  </style>
+        @media all and (orientation: landscape) {
+
+            .promo__product,
+            .promo__information {
+                max-width: 360px;
+                max-width: 22.5em;
+                margin: 0;
+            }
+        }
+
+        .promo__product {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 0.3em;
+            padding: 1.5em 1.25em 0.63em;
+        }
+
+        .promo__product-img {
+            width: 100%;
+        }
+
+        .promo__product-logo {
+            margin-top: 0.6em;
+            width: 2.5em;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+
+        @media all and (orientation: landscape) {
+            .promo__product {
+                max-width: 16.2em;
+            }
+        }
+
+        @media all and (orientation: landscape) {
+            .promo__information {
+                margin-left: 1.9em;
+            }
+        }
+
+        .promo__title {
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-top: 1.3em;
+        }
+
+        @media all and (orientation: landscape) {
+            .promo__title {
+                margin-top: 0px;
+            }
+        }
+
+        .promo__description {
+            margin-top: 0.6em;
+            font-size: 1.2em;
+            line-height: 1.4;
+            letter-spacing: 0.03em;
+        }
+
+        .promo__buttons {
+            margin-top: 2.4em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .promo__buttons .button {
+            width: calc(50% - 0.8em);
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0.2em solid #fff;
+            border-radius: 0.19em;
+            background-color: #fff;
+            color: #000;
+            height: 2.4em;
+            box-sizing: border-box;
+            font-size: 1.25em;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            outline: inherit;
+        }
+
+        .button--light {
+            background-color: transparent;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="promo">
-    <div class="promo__blurred-image">
-      <img alt="Background Image" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
-    </div>
-    <div class="promo__content">
-      <div class="promo__product">
-        <img alt="Product Image" class="promo__product-img" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
-        <img alt="Product Logo" class="promo__product-logo" src="https://cta.bidmachine.io/apps/icons/com.newpubco.spades.jpg">
-      </div>
-      <div class="promo__information">
-        <h1 class="promo__title">
-          Spades: Classic card game
-        </h1>
-        <p class="promo__description">
-          NewPub’s Spades is the best online spades alternative to the classic game of Spades
-        </p>
-        <div class="promo__buttons">
-          <button class="button button--light" id="closeButton">Close</button>
-          <button class="button button" id="installButton">Install</button>
+    <div class="promo">
+        <div class="promo__blurred-image">
+            <img alt="Background Image" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
         </div>
-      </div>
+        <div class="promo__content">
+            <div class="promo__product">
+                <img alt="Product Image" class="promo__product-img"
+                    src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
+                <img alt="Product Logo" class="promo__product-logo"
+                    src="https://cta.bidmachine.io/apps/icons/com.newpubco.spades.jpg">
+            </div>
+            <div class="promo__information">
+                <h1 class="promo__title">
+                    Spades: Classic card game
+                </h1>
+                <p class="promo__description">
+                    NewPub’s Spades is the best online spades alternative to the classic game of Spades
+                </p>
+                <div class="promo__buttons">
+                    <button class="button button--light" id="closeButton">Close</button>
+                    <button class="button button" id="installButton">Install</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const closeButton = document.getElementById("closeButton");
-      const installButton = document.getElementById("installButton");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const closeButton = document.getElementById("closeButton");
+            const installButton = document.getElementById("installButton");
 
-      closeButton.addEventListener("click", function () {
-        window.close();
-      });
+            closeButton.addEventListener("click", function () {
+                window.close();
+            });
 
-      installButton.addEventListener("click", function () {
-        const clickTrackers = [
-          "https://click.tracker.com/1",
-          "https://click.tracker.com/2",
-        ];
+            installButton.addEventListener("click", function () {
+                const clickTrackers = [
+                    "https://click.tracker.com/1",
+                    "https://click.tracker.com/2",
+                ];
 
-        clickTrackers.forEach(function (trackerUrl) {
-          sendRequest(trackerUrl);
+                clickTrackers.forEach(function (trackerUrl) {
+                    sendRequest(trackerUrl);
+                });
+
+                window.location.href = "https://play.google.com/store/apps/details?id=com.newpubco.spades&hl=en&gl=US&pli=1";
+            });
+
+            function sendRequest(url) {
+                const img = new Image();
+                img.src = url;
+                img.style.display = "none";
+                document.body.appendChild(img);
+            }
         });
-
-        window.location.href = "https://play.google.com/store/apps/details?id=com.newpubco.spades&hl=en&gl=US&pli=1";
-      });
-
-      function sendRequest(url) {
-        const img = new Image();
-        img.src = url;
-        img.style.display = "none";
-        document.body.appendChild(img);
-      }
-    });
-  </script>
+    </script>
 </body>
+
 </html>
