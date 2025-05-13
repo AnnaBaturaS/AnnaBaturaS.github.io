@@ -1,0 +1,34 @@
+{
+    "id": "def",
+    "Video": {
+      "SKOverlay": true,
+      "FullscreenClickability": false,
+      "CTA_Type": "Type 1",
+      "CTA_position_Y": "top",
+      "SkipTime": "6s",
+      "ButtonSize": "20x20",
+      "ButtonPosition": "b(15)-r(15)",
+      "ButtonImg": "<",
+      "ButtonBackground": "#FF0000",
+      "Countdown": "12s",
+      "CountdownVisibility": true
+    },
+    "EndCard": {
+      "EndCardType": 3,
+      "EffectType": 3,
+      "SkipTime": "2s",
+      "ButtonSize": "20x20",
+      "ButtonPosition": "b(15)-rt(15)",
+      "ButtonImg": "<",
+      "ButtonBackground": "#FF0000",
+      "Countdown": "4s",
+      "CountdownVisibility": true
+    },
+    "PostBanner": {
+      "PostBannerType": 30,
+      "ButtonSize": "20x20",
+      "ButtonPosition": "b(15)-r(15)",
+      "ButtonImg": "x",
+      "ButtonBackground": "#FF0000"
+    }
+  }

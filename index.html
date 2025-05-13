@@ -3,299 +3,246 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Spades: Classic card game</title>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <title>Enhanced JSON Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
-
-        html {
-            height: 100%;
-            width: 100%;
-        }
-
         body {
+            height: 100vh;
             margin: 0;
-            font-family: "Montserrat", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeSpeed;
-            color: #fff;
-            user-select: none;
-            font-size: 16px;
         }
 
-        @media (min-width: 600px) {
-            body {
-                font-size: 18px;
-            }
+        .table-container {
+            overflow: auto;
+            max-height: 100vh;
+            position: relative;
         }
 
-        @media (min-width: 700px) {
-            body {
-                font-size: 22px;
-            }
+        table {
+            width: max-content;
+            min-width: 100%;
         }
 
-        @media (min-width: 800px) {
-            body {
-                font-size: 25px;
-            }
+        th,
+        td {
+            white-space: nowrap;
+            transition: background-color 0.3s;
         }
 
-        @media (min-width: 1024px) {
-            body {
-                font-size: 28px;
-            }
+        .sticky {
+            position: sticky;
+            background-color: oklch(96.8% 0.007 247.896);
+            z-index: 2;
         }
 
-        @media (min-width: 1300px) {
-            body {
-                font-size: 30px;
-            }
-        }
-
-        @media all and (orientation: landscape) and (min-width: 600px) {
-
-            body {
-                font-size: 16px;
-            }
-        }
-
-        @media all and (orientation: landscape) and (min-width: 800px) {
-
-            body {
-                font-size: 20px;
-            }
-        }
-
-        @media all and (orientation: landscape) and (min-width: 1000px) {
-
-            body {
-                font-size: 24px;
-            }
-        }
-
-        @media all and (orientation: landscape) and (min-width: 1300px) {
-
-            body {
-                font-size: 30px;
-            }
-        }
-
-        h1,
-        p {
-            margin: 0;
-            font-weight: 500;
-            font-size: 1.125em;
-            line-height: 1;
-        }
-
-        img {
-            display: block;
-        }
-
-        .promo__blurred-image {
-            position: absolute;
+        .sticky-top-0 {
             top: 0;
+            z-index: 20;
+        }
+
+        .sticky-left-0 {
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 250px;
+            max-width: 250px;
+            min-width: 250px;
         }
 
-        .promo__blurred-image img {
-            position: absolute;
-            top: 0;
+        .sticky-left-1 {
+            left: 250px;
+            width: 120px;
+            max-width: 120px;
+            min-width: 120px;
+        }
+
+        .sticky-left-2 {
+            left: 370px;
+            width: 130px;
+            max-width: 130px;
+            min-width: 130px;
+        }
+
+        .sticky-right {
+            right: 0;
+        }
+
+        .section-divider td {
+            background-color: oklch(92.9% 0.013 255.508);
+            position: sticky;
+            top: 37px;
             left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            z-index: 10;
+            font-weight: bold;
+            text-align: left;
         }
 
-        .promo__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 1.9em;
-            box-sizing: border-box;
+        .sticky-right {
+            background-color: oklch(96.8% 0.007 247.896);
         }
 
-        @media all and (orientation: landscape) {
-            .promo__content {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-
-        .promo__product,
-        .promo__information {
-            max-width: 340px;
-            max-width: 21.3em;
-            margin: 0 auto;
-        }
-
-        @media all and (orientation: landscape) {
-
-            .promo__product,
-            .promo__information {
-                max-width: 360px;
-                max-width: 22.5em;
-                margin: 0;
-            }
-        }
-
-        .promo__product {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 0.3em;
-            padding: 1.5em 1.25em 0.63em;
-        }
-
-        .promo__product-img {
-            width: 100%;
-        }
-
-        .promo__product-logo {
-            margin-top: 0.6em;
-            width: 2.5em;
-            object-fit: cover;
-            aspect-ratio: 1/1;
-        }
-
-        @media all and (orientation: landscape) {
-            .promo__product {
-                max-width: 16.2em;
-            }
-        }
-
-        @media all and (orientation: landscape) {
-            .promo__information {
-                margin-left: 1.9em;
-            }
-        }
-
-        .promo__title {
-            font-size: 1.6em;
-            font-weight: 600;
-            margin-top: 1.3em;
-        }
-
-        @media all and (orientation: landscape) {
-            .promo__title {
-                margin-top: 0px;
-            }
-        }
-
-        .promo__description {
-            margin-top: 0.6em;
-            font-size: 1.2em;
-            line-height: 1.4;
-            letter-spacing: 0.03em;
-        }
-
-        .promo__buttons {
-            margin-top: 2.4em;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .promo__buttons .button {
-            width: calc(50% - 0.8em);
-        }
-
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            border: 0.2em solid #fff;
-            border-radius: 0.19em;
-            background-color: #fff;
-            color: #000;
-            height: 2.4em;
-            box-sizing: border-box;
-            font-size: 1.25em;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-family: "Montserrat", sans-serif;
-            outline: inherit;
-        }
-
-        .button--light {
-            background-color: transparent;
-            color: #fff;
+        .highlight {
+            background-color: oklch(88.2% 0.059 254.128);
         }
     </style>
 </head>
 
 <body>
-    <div class="promo">
-        <div class="promo__blurred-image">
-            <img alt="Background Image" src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
-        </div>
-        <div class="promo__content">
-            <div class="promo__product">
-                <img alt="Product Image" class="promo__product-img"
-                    src="https://i.gyazo.com/5821e28c34e91e10a484e8dce0b60203.jpg">
-                <img alt="Product Logo" class="promo__product-logo"
-                    src="https://cta.bidmachine.io/apps/icons/com.newpubco.spades.jpg">
-            </div>
-            <div class="promo__information">
-                <h1 class="promo__title">
-                    Spades: Classic card game
-                </h1>
-                <p class="promo__description">
-                    NewPub’s Spades is the best online spades alternative to the classic game of Spades
-                </p>
-                <div class="promo__buttons">
-                    <button class="button button--light" id="closeButton">Close</button>
-                    <button class="button button" id="installButton">Install</button>
-                </div>
-            </div>
-        </div>
+
+    <div class="table-container">
+        <table id="jsonTable" class="border-collapse   border-gray-200">
+            <thead class="bg-gray-100 sticky sticky-top-0">
+                <tr id="tableHead">
+                    <th class="  px-4 py-2 sticky sticky-left-0">Setting</th>
+                    <th class="  px-4 py-2 sticky sticky-left-1">Default</th>
+                    <th class="  px-4 py-2 sticky sticky-left-2">Result</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const closeButton = document.getElementById("closeButton");
-            const installButton = document.getElementById("installButton");
+        async function loadJSON(url) {
+            const response = await fetch(url);
+            return await response.json();
+        }
 
-            closeButton.addEventListener("click", function () {
-                window.close();
+        const highPriorityCells = [
+            { itemId: "item1", param: "Video.CTA_Type" },
+            { itemId: "item5", param: "Video.ButtonSize" },
+        ];
+
+        async function buildTable() {
+            const def = await loadJSON('./def.json');
+            const data = await loadJSON('./data.json');
+
+            const tableHead = document.getElementById('tableHead');
+            const tableBody = document.getElementById('tableBody');
+
+            data.forEach(item => {
+                const th = document.createElement('th');
+                th.textContent = item.id;
+                th.className = '  px-4 py-2';
+                tableHead.appendChild(th);
             });
 
-            installButton.addEventListener("click", function () {
-                const clickTrackers = [
-                    "https://click.tracker.com/1",
-                    "https://click.tracker.com/2",
-                ];
+            const priorityTh = document.createElement('th');
+            priorityTh.textContent = 'Priority';
+            priorityTh.className = '  px-4 py-2 sticky sticky-right';
+            tableHead.appendChild(priorityTh);
 
-                clickTrackers.forEach(function (trackerUrl) {
-                    sendRequest(trackerUrl);
+            const sections = ['Video', 'EndCard', 'PostBanner'];
+
+            sections.forEach(section => {
+                const divider = document.createElement('tr');
+                divider.className = 'section-divider z-10';
+                divider.innerHTML = `<td class='sticky sticky-left-0' colspan="${data.length + 4}"><span class='sticky sticky-left-0'>${section}<span></td>`;
+                tableBody.appendChild(divider);
+
+                Object.keys(def[section]).forEach(param => {
+                    const fullParam = `${section}.${param}`;
+                    const tr = document.createElement('tr');
+
+                    const paramTd = document.createElement('td');
+                    paramTd.className = '  px-4 py-2 sticky sticky-left-0';
+                    paramTd.textContent = fullParam;
+                    tr.appendChild(paramTd);
+
+                    const defaultTd = document.createElement('td');
+                    defaultTd.textContent = def[section][param];
+                    defaultTd.className = '  px-4 py-2 sticky sticky-left-1';
+                    tr.appendChild(defaultTd);
+
+                    const resultTd = document.createElement('td');
+                    resultTd.className = '  px-4 py-2 sticky sticky-left-2 font-semibold cursor-pointer';
+                    tr.appendChild(resultTd);
+
+                    data.forEach(item => {
+                        const itemTd = document.createElement('td');
+                        itemTd.textContent = item[section][param];
+                        itemTd.className = '  px-4 py-2';
+                        if (highPriorityCells.some(h => h.itemId === item.id && h.param === fullParam)) {
+                            itemTd.innerHTML += ' 🔒';
+                            itemTd.dataset.locked = 'true';
+                        }
+                        tr.appendChild(itemTd);
+                    });
+
+                    const priorityTd = document.createElement('td');
+                    priorityTd.className = 'px-4 py-2 sticky sticky-right bg-slate-100';
+                    const uniqueValues = [...new Set(data.map(item => item[section][param]))];
+
+                    priorityTd.innerHTML = `
+  <select class="priority-select block w-full border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition ease-in-out">
+    ${uniqueValues.map(val => `<option value="${val}">${val}</option>`).join('')}
+  </select>
+`;
+                    tr.appendChild(priorityTd);
+                    tableBody.appendChild(tr);
                 });
-
-                window.location.href = "https://play.google.com/store/apps/details?id=com.newpubco.spades&hl=en&gl=US&pli=1";
             });
 
-            function sendRequest(url) {
-                const img = new Image();
-                img.src = url;
-                img.style.display = "none";
-                document.body.appendChild(img);
-            }
-        });
+            function updateResults() {
+  document.querySelectorAll('#tableBody tr').forEach(row => {
+    const lockedCells = row.querySelectorAll('[data-locked="true"]');
+    const resultCell = row.children[2];
+    const prioritySelect = row.querySelector('.priority-select');
+
+    if (lockedCells.length === 1) {
+      resultCell.textContent = lockedCells[0].textContent;
+      resultCell.onclick = () => {
+        const scrollingParent = document.querySelector('.table-container');
+        const cell = lockedCells[0];
+        const cellLeftRelativeToParent = cell.getBoundingClientRect().left - scrollingParent.getBoundingClientRect().left;
+        const offsetAdjustment = 50;
+        const targetScrollPosition = scrollingParent.scrollLeft + cellLeftRelativeToParent - (scrollingParent.clientWidth / 2) + (cell.clientWidth / 2) + offsetAdjustment;
+
+        scrollingParent.scrollTo({ left: targetScrollPosition, behavior: 'smooth' });
+        cell.classList.add('highlight');
+
+        setTimeout(() => cell.classList.remove('highlight'), 2000);
+      };
+    } else if (lockedCells.length > 1) {
+      resultCell.innerHTML = `
+        <select class="result-select block w-full border rounded bg-orange-200">
+          ${[...lockedCells].map(c => `<option>${c.textContent.replace('🔒', '').trim()}</option>`).join('')}
+        </select> 🔒+
+      `;
+
+      resultCell.querySelector('.result-select').onchange = (e) => {
+        const selectedText = e.target.value;
+        const targetCell = [...lockedCells].find(c => c.textContent.includes(selectedText));
+
+        if (targetCell) {
+          const scrollingParent = document.querySelector('.table-container');
+          const cellLeftRelativeToParent = targetCell.getBoundingClientRect().left - scrollingParent.getBoundingClientRect().left;
+          const offsetAdjustment = 50;
+          const targetScrollPosition = scrollingParent.scrollLeft + cellLeftRelativeToParent - (scrollingParent.clientWidth / 2) + (targetCell.clientWidth / 2) + offsetAdjustment;
+
+          scrollingParent.scrollTo({ left: targetScrollPosition, behavior: 'smooth' });
+          targetCell.classList.add('highlight');
+
+          setTimeout(() => targetCell.classList.remove('highlight'), 2000);
+        }
+      };
+    } else if (prioritySelect) {
+      resultCell.textContent = prioritySelect.value;
+      resultCell.onclick = null;
+    }
+  });
+}
+
+
+            updateResults();
+
+            document.querySelectorAll('.priority-select').forEach(select => {
+                select.addEventListener('change', updateResults);
+            });
+        }
+
+        buildTable().catch(console.error);
+
+        
     </script>
+
 </body>
 
 </html>

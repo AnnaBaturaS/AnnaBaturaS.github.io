@@ -1,0 +1,481 @@
+[
+    {
+      "id": "item1",
+      "Video": {
+        "SKOverlay": true,
+        "FullscreenClickability": true,
+        "CTA_Type": "Learn more",
+        "CTA_position_Y": "bottom",
+        "SkipTime": "4s",
+        "ButtonSize": "25x25",
+        "ButtonPosition": "t(20)-r(20)",
+        "ButtonImg": ">",
+        "ButtonBackground": "#000000",
+        "Countdown": "8s",
+        "CountdownVisibility": false
+      },
+      "EndCard": {
+        "EndCardType": 1,
+        "EffectType": 1,
+        "SkipTime": "4s",
+        "ButtonSize": "25x25",
+        "ButtonPosition": "t(20)-r(20)",
+        "ButtonImg": ">",
+        "ButtonBackground": "#000000",
+        "Countdown": "8s",
+        "CountdownVisibility": true
+      },
+      "PostBanner": {
+        "PostBannerType": 24,
+        "ButtonSize": "25x25",
+        "ButtonPosition": "t(20)-r(20)",
+        "ButtonImg": "x",
+        "ButtonBackground": "#000000"
+      }
+    },
+    {
+      "id": "item2",
+      "Video": {
+        "SKOverlay": false,
+        "FullscreenClickability": false,
+        "CTA_Type": "Type 1",
+        "CTA_position_Y": "bottom",
+        "SkipTime": "5s",
+        "ButtonSize": "30x30",
+        "ButtonPosition": "b(10)-l(10)",
+        "ButtonImg": "v",
+        "ButtonBackground": "#FFFFFF",
+        "Countdown": "10s",
+        "CountdownVisibility": true
+      },
+      "EndCard": {
+        "EndCardType": 2,
+        "EffectType": 2,
+        "SkipTime": "3s",
+        "ButtonSize": "30x30",
+        "ButtonPosition": "b(10)-l(10)",
+        "ButtonImg": "v",
+        "ButtonBackground": "#FFFFFF",
+        "Countdown": "6s",
+        "CountdownVisibility": false
+      },
+      "PostBanner": {
+        "PostBannerType": 18,
+        "ButtonSize": "30x30",
+        "ButtonPosition": "b(10)-l(10)",
+        "ButtonImg": "x",
+        "ButtonBackground": "#FFFFFF"
+      }
+    },
+    {
+      "id": "item3",
+      "Video": {
+        "SKOverlay": true,
+        "FullscreenClickability": false,
+        "CTA_Type": "non",
+        "CTA_position_Y": "top",
+        "SkipTime": "6s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "12s",
+        "CountdownVisibility": true
+      },
+      "EndCard": {
+        "EndCardType": 3,
+        "EffectType": 3,
+        "SkipTime": "2s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "4s",
+        "CountdownVisibility": true
+      },
+      "PostBanner": {
+        "PostBannerType": 30,
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "x",
+        "ButtonBackground": "#FF0000"
+      }
+    },
+    {
+      "id": "item4",
+      "Video": {
+        "SKOverlay": true,
+        "FullscreenClickability": false,
+        "CTA_Type": "non",
+        "CTA_position_Y": "top",
+        "SkipTime": "6s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "12s",
+        "CountdownVisibility": true
+      },
+      "EndCard": {
+        "EndCardType": 3,
+        "EffectType": 3,
+        "SkipTime": "2s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "4s",
+        "CountdownVisibility": true
+      },
+      "PostBanner": {
+        "PostBannerType": 30,
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "x",
+        "ButtonBackground": "#FF0000"
+      }
+    },
+    {
+      "id": "item5",
+      "Video": {
+        "SKOverlay": true,
+        "FullscreenClickability": false,
+        "CTA_Type": "non",
+        "CTA_position_Y": "top",
+        "SkipTime": "6s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "12s",
+        "CountdownVisibility": true
+      },
+      "EndCard": {
+        "EndCardType": 3,
+        "EffectType": 3,
+        "SkipTime": "2s",
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "<",
+        "ButtonBackground": "#FF0000",
+        "Countdown": "4s",
+        "CountdownVisibility": true
+      },
+      "PostBanner": {
+        "PostBannerType": 30,
+        "ButtonSize": "20x20",
+        "ButtonPosition": "b(15)-r(15)",
+        "ButtonImg": "x",
+        "ButtonBackground": "#FF0000"
+    }
+},
+
+      {
+        "id": "item6",
+        "Video": {
+          "SKOverlay": false,
+          "FullscreenClickability": false,
+          "CTA_Type": "Type 1",
+          "CTA_position_Y": "bottom",
+          "SkipTime": "5s",
+          "ButtonSize": "30x30",
+          "ButtonPosition": "b(10)-l(10)",
+          "ButtonImg": "v",
+          "ButtonBackground": "#FFFFFF",
+          "Countdown": "10s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 2,
+          "EffectType": 2,
+          "SkipTime": "3s",
+          "ButtonSize": "30x30",
+          "ButtonPosition": "b(10)-l(10)",
+          "ButtonImg": "v",
+          "ButtonBackground": "#FFFFFF",
+          "Countdown": "6s",
+          "CountdownVisibility": false
+        },
+        "PostBanner": {
+          "PostBannerType": 18,
+          "ButtonSize": "30x30",
+          "ButtonPosition": "b(10)-l(10)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FFFFFF"
+        }
+      },
+      {
+        "id": "item7",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item8",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item9",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item10",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item11",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item12",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item13",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      },
+      {
+        "id": "item14",
+        "Video": {
+          "SKOverlay": true,
+          "FullscreenClickability": false,
+          "CTA_Type": "non",
+          "CTA_position_Y": "top",
+          "SkipTime": "6s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "12s",
+          "CountdownVisibility": true
+        },
+        "EndCard": {
+          "EndCardType": 3,
+          "EffectType": 3,
+          "SkipTime": "2s",
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "<",
+          "ButtonBackground": "#FF0000",
+          "Countdown": "4s",
+          "CountdownVisibility": true
+        },
+        "PostBanner": {
+          "PostBannerType": 30,
+          "ButtonSize": "20x20",
+          "ButtonPosition": "b(15)-r(15)",
+          "ButtonImg": "x",
+          "ButtonBackground": "#FF0000"
+        }
+      }
+    
+  ]
+  
